@@ -7,7 +7,7 @@ bool isAllNum(char* input)
     std::strtod(input, &end);
     return (end != input && *end == '\0') ||
            ((*end == 'f' || *end == 'F') && *(end + 1) == '\0'); 
-    //end != input 1 verdin end'in null'a ilerlemis olmasi gerekli && *end == '\0' 12a almasin diye sonu f olabilir floating oldugundan
+    //end != input 1 verdin end'in null'a ilerlemis olmasi gerekli && *end == '\0' 12a almasin diye sonu f olabilir floating oldugundan end + 1 == '\0' checki sonunda fffff spamlemmesin diye
 }
 
 int main(int argc, char **argv)

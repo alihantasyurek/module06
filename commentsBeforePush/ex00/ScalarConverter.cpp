@@ -21,10 +21,10 @@ void ScalarConverter::toChar(std::string input)
     try
 	{
 		if(std::atoi(input.c_str()) > 255)
-			std::cout << "impossible" << std::endl;
-		else if(input.length() == 1 && !std::isdigit(input[0]) && std::isprint(input[0]))
+			throw std::exception(); // When throwing exceptions in C++, you must throw an instance of a type (an object). For example, std::exception() is a temporary object of type std::exception created using its default constructor.
+		else if(input.length() == 1 && !std::isdigit(input[0]) && std::isprint(input[0])) //a
 			std::cout << "'" <<static_cast<char>(input[0]) << "'" << std::endl;
-		else if(std::isprint(static_cast<char>(std::atoi(input.c_str()))))
+		else if(std::isprint(static_cast<char>(std::atoi(input.c_str())))) // 42.1f == 42 == * // need numbers first 
 			std::cout << "'" << static_cast<char>(std::atoi(input.c_str())) << "'" << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
@@ -32,7 +32,7 @@ void ScalarConverter::toChar(std::string input)
 	}
     catch(const std::exception& e)
     {
-        std::cerr << "impossible" << std::endl;
+        std::cout << "impossible" << std::endl;
     }
     
 }
@@ -41,13 +41,13 @@ void	ScalarConverter::toInt(std::string input)
 {
 	std::cout << "int: ";
 	try {
-		int num = std::stoi(input);
+		int num = std::stoi(input); // 42.1f == 42(int); it needs to see number first
 		std::cout << num << std::endl;
 
 	} 
 	catch (const std::invalid_argument& ia) 
 	{
-		if (input.length() == 1 && std::isprint(input[0]))
+		if (input.length() == 1 && std::isprint(input[0]))//a? 
 			std::cout << static_cast<int>(input[0]) << std::endl;
 		else
 			std::cout << "impossible" << std::endl;
