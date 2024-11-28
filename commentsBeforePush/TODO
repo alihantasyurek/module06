@@ -1,0 +1,16 @@
+ex00:
+
+./convert nanf
+char: impossible
+int: impossible
+float: nanf
+double: nanf
+*make double nan here
+
+*14f is excepted it shouldn't be
+
+*format the code 
+
+*change the makefiles
+
+*remove the comments

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Converter.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-khni <ael-khni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: atasyure <atasyure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:04:21 by ael-khni          #+#    #+#             */
-/*   Updated: 2022/08/11 13:24:10 by ael-khni         ###   ########.fr       */
+/*   Updated: 2024/11/27 21:55:38 by atasyure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -241,7 +241,8 @@ bool    Converter::isImpossible( void ) {
     return false;
 }
 
-void    Converter::convert( void ) {
+void    Converter::convert(const std::string& str) {
+    this->setStr(str);
     if ( isImpossible() )
         return;
     switch ( _type ) {

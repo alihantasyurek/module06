@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Converter.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-khni <ael-khni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: atasyure <atasyure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 16:04:02 by ael-khni          #+#    #+#             */
-/*   Updated: 2022/08/09 16:18:07 by ael-khni         ###   ########.fr       */
+/*   Updated: 2024/11/27 21:55:30 by atasyure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ public:
     double  getD( void ) const;
     void    setD( double d );
 
-    void    convert( void );
+    void    convert(const std::string& str);
 
     void    setStr( std::string str );
     std::string    getStr( void ) const;
